@@ -8,7 +8,7 @@ import "./globals.css"
 import { ScrollToTop } from "@/components/scroll-to-top"
 
 export const metadata: Metadata = {
-  title: "PL 52 Vikāsa - Jornadas Lúdicas y Servicio Social",
+  title: "PL 52 Vikāsa",
   description: "Únete a nuestras jornadas lúdicas. Regala sonrisas y multiplica alegría en las comunidades.",
   generator: "Vikāsa",
   icons: {
