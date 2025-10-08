@@ -67,44 +67,49 @@ export function Navbar() {
         </div>
 
         {isMobileMenuOpen && (
-          <div className="md:hidden relative overflow-hidden animate-in slide-in-from-top duration-500">
-            {/* Gradient background with blur */}
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10 backdrop-blur-xl" />
+          <div className="md:hidden relative overflow-hidden animate-in slide-in-from-top duration-300">
+            {/* Clean subtle overlay */}
+            <div className="absolute inset-0 bg-background/95 backdrop-blur-md border-t border-border/50" />
 
-            {/* Animated border */}
-            <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-primary via-secondary to-accent animate-pulse" />
-
-            <div className="relative py-6 px-2">
-              <div className="flex flex-col gap-1">
-                {navLinks.map((link) => (
+            <div className="relative py-4 px-4">
+              <div className="space-y-2">
+                {navLinks.map((link, index) => (
                   <Link
                     key={link.href}
                     href={link.href}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="group relative text-lg font-semibold text-foreground py-4 px-6 rounded-xl transition-all duration-300 hover:scale-105"
+                    className="group block animate-in slide-in-from-left duration-300"
+                    style={{ animationDelay: `${index * 50}ms` }}
                   >
-                    {/* Hover background with gradient */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-primary/0 via-primary/10 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
+                    <div className="relative flex items-center gap-3 px-4 py-3 rounded-lg transition-all duration-200 hover:bg-primary/10 hover:scale-[1.02]">
+                      {/* Subtle left accent */}
+                      <div className="w-1 h-6 bg-primary/30 rounded-full transition-all duration-200 group-hover:h-8 group-hover:bg-primary" />
+                      
+                      {/* Content */}
+                      <div className="flex-1">
+                        <span className="text-base font-medium text-foreground transition-colors duration-200 group-hover:text-primary">
+                          {link.label}
+                        </span>
+                      </div>
 
-                    {/* Animated left border */}
-                    <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-0 bg-gradient-to-b from-primary via-secondary to-accent group-hover:h-3/4 transition-all duration-300 rounded-full" />
-
-                    {/* Text with gradient on hover */}
-                    <span className="relative z-10 group-hover:bg-gradient-to-r group-hover:from-primary group-hover:via-secondary group-hover:to-accent group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
-                      {link.label}
-                    </span>
-
-                    {/* Shine effect */}
-                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+                      {/* Arrow indicator */}
+                      <div className="w-5 h-5 rounded-full bg-muted flex items-center justify-center transition-all duration-200 group-hover:bg-primary/20 group-hover:scale-110">
+                        <div className="w-1.5 h-1.5 border-r border-t border-muted-foreground rotate-45 transition-colors duration-200 group-hover:border-primary" />
+                      </div>
                     </div>
                   </Link>
                 ))}
               </div>
-            </div>
 
-            {/* Bottom gradient border */}
-            <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-accent via-secondary to-primary animate-pulse" />
+              {/* Simple bottom accent */}
+              <div className="mt-4 pt-4 border-t border-border/50">
+                <div className="flex items-center justify-center gap-2 text-xs text-muted-foreground">
+                  <div className="w-1 h-1 rounded-full bg-primary animate-pulse" />
+                  <span>VIKĀSA</span>
+                  <div className="w-1 h-1 rounded-full bg-secondary animate-pulse" style={{ animationDelay: '500ms' }} />
+                </div>
+              </div>
+            </div>
           </div>
         )}
       </div>
