@@ -2,6 +2,7 @@
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Card } from "@/components/ui/card"
+import { Users } from "lucide-react"
 
 const teamMembers = [
   {
@@ -184,6 +185,7 @@ export function TeamSection() {
         {/* Section Header */}
         <div className="text-center mb-16 space-y-4">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full mb-4">
+            <Users className="w-4 h-4 fill-primary text-primary" />
             <span className="text-sm font-medium text-primary">Nuestro Equipo</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold">

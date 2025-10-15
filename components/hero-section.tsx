@@ -105,7 +105,6 @@ export function HeroSection() {
                 className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-primary-foreground text-base md:text-lg px-6 md:px-8 py-5 md:py-6 shadow-2xl hover:shadow-primary/50 transition-all duration-300 hover:scale-105 group"
               >
                 Únete a nuestra jornada
-                <ArrowRight className="ml-2 w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
             <Link href="/equipo" className="w-full sm:w-auto">
@@ -114,6 +113,23 @@ export function HeroSection() {
                 className="w-full sm:w-auto bg-secondary hover:bg-secondary/90 text-secondary-foreground text-base md:text-lg px-6 md:px-8 py-5 md:py-6 shadow-lg transition-all duration-300 hover:scale-105"
               >
                 Conoce a nuestro equipo
+              </Button>
+            </Link>
+            <Link href="/galeria" className="w-full sm:w-auto">
+              <Button
+                size="lg"
+                className="w-full sm:w-auto text-white text-base md:text-lg px-6 md:px-8 py-5 md:py-6 shadow-lg transition-all duration-300 hover:scale-105"
+                style={{ 
+                  backgroundColor: '#E0A000'
+                }}
+                onMouseEnter={(e) => {
+                  (e.target as HTMLElement).style.backgroundColor = 'rgba(224, 160, 0, 0.9)';
+                }}
+                onMouseLeave={(e) => {
+                  (e.target as HTMLElement).style.backgroundColor = '#E0A000';
+                }}
+              >
+                Rostros del cambio
               </Button>
             </Link>
             <Link href="/contacto" className="w-full sm:w-auto">

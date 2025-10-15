@@ -26,16 +26,19 @@ export function Footer() {
           <div className="space-y-4 text-center md:text-left">
             <h3 className="font-bold text-foreground">Enlaces Rápidos</h3>
             <nav className="flex flex-col gap-2 items-center md:items-start">
-              <Link href="#inicio" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+              <Link href="/" className="text-muted-foreground hover:text-primary transition-colors text-sm">
                 Inicio
               </Link>
-              <Link href="#actividades" className="text-muted-foreground hover:text-primary transition-colors text-sm">
-                Actividades
+              <Link href="/legado" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                Legado
               </Link>
-              <Link href="#equipo" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+              <Link href="/equipo" className="text-muted-foreground hover:text-primary transition-colors text-sm">
                 Equipo
               </Link>
-              <Link href="#contacto" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+              <Link href="/galeria" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                Galería de Impacto
+              </Link>
+              <Link href="/contacto" className="text-muted-foreground hover:text-primary transition-colors text-sm">
                 Contacto
               </Link>
             </nav>

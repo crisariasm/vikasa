@@ -86,12 +86,16 @@ function FormBlock() {
 export function ContactSection() {
   return (
     <section id="contacto" className="pt-8 md:pt-16 pb-8 relative overflow-hidden">
-      {/* Background Gradient */}
-      <div className="absolute inset-0 -z-10 bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10" />
+      {/* Background */}
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background via-muted/30 to-background" />
 
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16 space-y-4">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full mb-4">
+            <MessageCircle className="w-4 h-4 fill-primary text-primary" />
+            <span className="text-sm font-medium text-primary">Contacto</span>
+          </div>
           <h2 className="text-4xl md:text-5xl font-bold">
             <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent text-balance">
               ¿Quieres Unirte o Apoyar Nuestras Jornadas?

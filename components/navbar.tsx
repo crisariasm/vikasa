@@ -20,6 +20,7 @@ export function Navbar() {
     { href: "/", label: "Inicio" },
     { href: "/legado", label: "Legado" },
     { href: "/equipo", label: "Equipo" },
+    { href: "/galeria", label: "Galería de Impacto" },
     { href: "/contacto", label: "Contacto" },
   ]
 
