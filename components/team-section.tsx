@@ -112,7 +112,7 @@ const teamMembers = [
   },
   {
     name: "Luz Stella Valencia Campuzano",
-    description: "YO SOY UNA MUJER ABUNDANTE, ÉXITOSA Y AMOROSA",
+    description: "Yo soy una mujer abundante, exitosa y amorosa",
     image: "https://ik.imagekit.io/6hr1tcsm9/luz%20stella.jpg?updatedAt=1759964486087?height=200&width=200",
     initials: "LV",
     color: "from-primary to-secondary",
@@ -172,6 +172,13 @@ const teamMembers = [
     image: "https://ik.imagekit.io/6hr1tcsm9/Ana.jpg?updatedAt=1759964451349?height=200&width=200",
     initials: "AA",
     color: "from-accent to-primary",
+  },
+  {
+    name: "Dina Arbeláez García",
+    description: "Yo soy una mujer disciplinada, próspera, amorosa y exitosa",
+    image: "https://ik.imagekit.io/6hr1tcsm9/dina.jpg?updatedAt=1760656436128?height=200&width=200",
+    initials: "DA",
+    color: "from-secondary to-accent",
   },
 ]
 
